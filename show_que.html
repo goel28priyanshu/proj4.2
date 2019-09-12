@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QUESTIONS AVAILABLE</title>
+    </head>
+    <body>
+        <?php
+         $con=mysqli_connect('localhost','root','','quizdb') or die("Unable to connect to server.");
+         $res=mysqli_query("SELECT qid,que from questions");
+         echo "<table border='1'>
+            <tr>
+            <th>Question id</th>
+            <th>Question</th>
+            </tr>";
+        
+            while($row=mysqli_fetch_array($res))
+            {
+                echo "<tr>";
+                echo "<td>".$row['qid']."</td>";
+                echo "<td>".$row['que']."</td>";
+                echo "<tr>"; 
+            }
+        echo "</table";
+
+        mysqli_close($con);
+        ?>
+    </body>
+</html>
