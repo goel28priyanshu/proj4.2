@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Add Question</title>
+        <style>
+            .q{
+                box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+                background: yellowgreen;
+                width: 400px;
+                margin: 20px auto;
+                padding: 15px;
+            }
+            form{
+                margin:20px auto;
+                width: 200px;
+            }
+            input{
+                padding:8px;
+                font-size: inherit;
+            }
+            input[type="text"]{
+                display: block;
+                margin:2px;
+                width:90%;
+                border: 1px solid black;
+            }
+            textarea[type="text"]{
+                display: block;
+                margin:2px;
+                width:100%;
+                border: 1px solid black;
+            }
+
+            button{
+                display: block;
+                padding: 10px 10px;
+                margin: 15px;
+                width: 70%;
+                font-size: 15px;
+                display: inline-block;
+                margin-left: 40px;
+                text-align: center;
+                cursor: pointer;
+                background: rgba(9, 156, 214, 0.705);
+                color: rgb(209, 12, 12);
+            }
+            input[type="password"]{
+                display: block;
+                margin:2px;
+                width:100%;
+                border: 1px solid black;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="q">
+            <form action="ques.php" method="POST">
+                <textarea type="text" name="ques" placeholder="Question" rows='7' cols='75'required></textarea>
+                <br>
+                <input type="text" name="opt1" placeholder="Option a" required>
+                <br>
+                <input type="text" name="opt2" placeholder="Option b" required>
+                <br>
+                <input type="text" name="opt3" placeholder="Option c" required>
+                <br>
+                <input type="text" name="opt4" placeholder="Option d" required>
+                <br>
+                <input type="text" name="corr" placeholder="Correct option(a or b or c or d)" required>
+                <br>
+                <input type="password" name="pass" placeholder="Your Password" required>
+                
+                <button type="submit" value="Add Ques" name="add">Add Question</button> 
+            </form>
+        </div>
+    </body>
+</html>
